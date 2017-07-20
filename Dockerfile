@@ -1,7 +1,8 @@
 FROM ubuntu:17.04
 
 RUN apt-get update -y \
-  && apt-get install -y --no-install-recommends wget tar gzip curl git jq awscli \
+  && apt-get install -y --no-install-recommends wget tar gzip curl git jq awscli python python-pip \
+  && pip install pygments \
   && rm -rf /var/lib/apt/lists/*
 
 RUN aws configure set preview.cloudfront true \
