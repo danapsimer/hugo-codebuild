@@ -1,6 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update -y \
+  && apt-get install -y tzdata \
   && apt-get install -y --no-install-recommends wget tar gzip curl git jq awscli python python-pip \
   && pip install pygments \
   && rm -rf /var/lib/apt/lists/*
