@@ -6,5 +6,5 @@ RUN apt-get update -y \
   && rm -rf /var/lib/apt/lists/*
 
 RUN aws configure set preview.cloudfront true \
-  && wget -q https://github.com/spf13/hugo/releases/download/v0.21/hugo_0.21_Linux-64bit.deb \
+  && wget -q https://github.com/spf13/hugo/releases/download/v0.48/hugo_0.48_Linux-64bit.deb \
   && dpkg -i hugo*.deb
